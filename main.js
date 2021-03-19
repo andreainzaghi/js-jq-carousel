@@ -20,6 +20,13 @@ $(".next").click(
   }
 
 );
+
+// setInterval(function () {
+//   var bullet = $(".nav i.active");
+//   if (bullet =$)
+//   nextImage();
+// }, 1500);
+
 $(".prev").click(
   function(){
     var immagineb = $ (".images img.active");
@@ -27,14 +34,14 @@ $(".prev").click(
     if ( immagineb.hasClass("last")==true){
       $(".images img.first").addClass("active")
     }else{
-      immagineb.next().addClass("active");
+      immagineb.prev().addClass("active");
     }
     var cerchiob = $ (".nav  i.active");
     cerchiob.removeClass("active");
     if ( cerchiob.hasClass("last")==true){
       $(".nav  i.first").addClass("active")
     }else{
-      cerchiob.next().addClass("active");
+      cerchiob.prev().addClass("active");
     }
 
   }
